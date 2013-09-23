@@ -1,0 +1,9 @@
+<li>
+<span class="content">categoria: <%= driver_license.code %> | <%= driver_license.description %><br /> vencimiento: <%= driver_license.expiration %></span>
+  <span class="timestamp">
+    Obtenida hace <%= time_ago_in_words(driver_license.created_at) %>
+  </span>
+    <%= link_to "Eliminar", driver_license, method: :delete,
+                                     confirm: "¿Esta Seguro?",
+                                     title: driver_license.code %>
+</li>

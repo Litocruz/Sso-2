@@ -1,0 +1,18 @@
+<% provide(:title, 'Alta Empleado') %>
+<h1>Alta Empleado </h1>
+<div class="row">
+  <aside class="span4">
+    <section>
+    </section>
+  </aside>
+  <div class="span6 offset3">
+    <%= form_for(@employee, :remote => true) do |f| %>
+      <div class"input-group input-lg">
+        <%= render 'fields', f: f %>
+        <%= render 'shared/driver_license_form', f: f %>
+        <%= f.submit "Crear Empleado", class: "btn btn-large btn-primary" %>
+      </div>
+    <% end %> 
+  </div>
+</div>
+

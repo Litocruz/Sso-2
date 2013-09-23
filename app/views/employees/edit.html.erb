@@ -1,0 +1,15 @@
+<% provide(:title, 'Editar Empleado') %>
+<h1>Editar Empleado </h1>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@employee) do |f| %>
+      <%= render 'fields', f: f %>
+      <%= render 'shared/driver_license_form', f: f %>
+      <%= f.submit "Guardar Cambios", class: "btn btn-large btn-primary" %>
+    <% end %> 
+
+    <%= gravatar_for @employee %>
+    <a href="http://gravatar.com/emails">Cambiar</a>
+  </div>
+</div>
+

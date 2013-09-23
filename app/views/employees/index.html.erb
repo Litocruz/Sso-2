@@ -1,0 +1,24 @@
+<% provide(:title, 'Todos los Empleados') %>
+<h1>Todos los Empleados</h1>
+
+<%= will_paginate %>
+
+<table id="employees" class="display" data-source="<%= employees_url(format: "json") %>">
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Nombre</th>
+      <th>Domicilio</th>
+      <th>Tipo de Documento</th>
+      <th>Numero de Documento</th>
+      <th>Fecha de Creación</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+<!- 9.3.4 Partial Render ->
+<tbody>
+  <div id="employees_list"> <%= render @employees %></div>
+</tbody>
+</table>
+<div id="employee_form"><%= render 'new' %></div>
+<%= will_paginate %>

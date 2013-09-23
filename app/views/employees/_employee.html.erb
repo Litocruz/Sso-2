@@ -1,0 +1,15 @@
+<% if employee.status? %>
+      <tr>
+        <td> <%= gravatar_for employee, size: 32 %></td>
+        <td><%= link_to employee.name, employee %></td>
+        <td><%= employee.address %></td>
+        <td><%= employee.document_type %></td>
+        <td><%= employee.document_number %></td>
+        <td><%= employee.created_at.strftime("%B %e, %Y") %></td>
+        <td>
+          | <%= link_to "X", employee, remote: true, method: :delete, confirm: "¿Esta seguro?" %>
+          | <%= link_to "Editar", edit_employee_path(employee), remote: true %>
+        </td>
+      </tr>
+<% end %>
+

@@ -1,0 +1,13 @@
+<% provide(:title, "Ingresar") %>
+<h1>Ingresar</h1>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(:session, url: sessions_path) do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email, placeholder: "Ingrese Email" %>
+      <%= f.label :password %>
+      <%= f.password_field :password, placeholder: "Ingrese Password" %>
+      <%= f.submit "Ingresar", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
